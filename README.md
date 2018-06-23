@@ -3,18 +3,12 @@ New York Times API shows the google street view, New York Times articles, and Wi
 
 # Running the Program
 1.Download all files/folders listed below and locate them in the same folder.
-- index.html
-
-- css folder
-
+-index.html
+-css folder
   -style.css
-  
 -js folder
-
-  *script.js
-  
-  *lib folder
-  
+  -script.js
+  -lib
     -jquery.min.js
 
 2.Open index.html in your web browser.
