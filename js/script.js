@@ -49,7 +49,7 @@ function loadData() {
 
     //get Wikipedia Results according to the typed address
 
-    var wikiurl = 'https://en.12312312312333wikipedia.org/w/api.php?action=opensearch&format=json&search='+cityNameWithNoSpace.join('')+"&callback=callback";
+    var wikiurl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search='+cityNameWithNoSpace.join('')+"&callback=callback";
     var wikiRequestTimeOut = setTimeout(function(){
         $wikiElem.text('Failed to load Wikipedia resources.');
     }, 8000);
@@ -60,14 +60,13 @@ function loadData() {
         jsonp: "callback",
         success: function(response){
             var wikiList = response[1];
-            if (articleList.length === 0){
+            if (wikiList.length === 0){
                 $wikiElem.text('Sorry, no result was found for your address: ' + address);
             }
             wikiList.forEach(wiki => {
                 var searchURL = "https://en.wikipedia.org/wiki/" + wiki;
                 $wikiElem.append('<li><a href="'+searchURL+'">'+ wiki +'</a></li>');
             });
-
             clearTimeout(wikiRequestTimeOut);
         }
     });
