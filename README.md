@@ -12,7 +12,9 @@ New York Times API shows the google street view, New York Times articles, and Wi
           -jquery.min.js
 
 2.Open index.html in your web browser.
+
 3.Type address you want to know in the form at the top right corner.
+
 4.Click any articles in New York Times section, or Wikipedia links to learn about the city you typed in. 
 
 # Acknowldgement
